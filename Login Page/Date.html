@@ -1,0 +1,54 @@
+<html>
+<head>
+<script type="text/script">
+$(function() {
+    if (typeof SVG == 'undefined') SVG = {};
+    if (typeof SVG.Weekpicker == 'undefined') SVG.Weekpicker = {};
+    SVG.Weekpicker.GetWeek = function(_selectedDate) {
+        var week = new Array();
+        for (i = 0; i < 5; i++) {
+            var tempDate = new Date(_selectedDate.getTime());
+            tempDate.setDate(tempDate.getDate() + i);
+            week.push(tempDate.getTime());
+        }
+        return week;
+    };
+    SVG.Weekpicker.Init = function() {
+        SVG.Weekpicker._dates = new Array();
+        var _currentDate = new Date();
+        SVG.Weekpicker._dates = SVG.Weekpicker.GetWeek(new Date(_currentDate.getFullYear(),
+                                                                _currentDate.getMonth(),
+                                                                27));
+
+        $('#datepicker').datepicker({
+            beforeShowDay: function(_date) {
+                if ($.inArray(_date.getTime(), SVG.Weekpicker._dates) >= 0) 
+                    return [true, "highlighted-week", "Week Range"];
+                return [true, "", ""];
+            },
+            onSelect: function(_selectedDate) {
+                var _date = new Date(_selectedDate);
+                SVG.Weekpicker._dates = SVG.Weekpicker.GetWeek(_date);
+            }
+        });
+    };
+
+    if ($('#datepicker').size() > 0) {
+        SVG.Weekpicker.Init();
+    }
+});
+</script>
+<style type="text/css">.highlighted-week a.ui-state-default{
+    background: url("images/ui-bg_glass_65_ffffff_1x400.png") repeat-x scroll 50% 50% #FFFFFF;
+    border: 1px solid #AAAAAA;
+    color: #212121;
+    font-weight: normal
+}</style>
+</head>
+<body>
+    
+    <div id="target" style="border:2px solid;">
+    <div id="datepicker" ></div>
+</div>
+</body>
+</html>

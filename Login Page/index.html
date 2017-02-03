@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>User Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  
+  <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Open+Sans'>
+  	
+      <link rel="stylesheet" href="css/style.css">
+   
+
+  
+</head>
+
+<body>
+  <div class="cont">
+<div class="row">
+ 
+</div>
+
+  
+  <div class="demo">
+     
+      <div class="login">
+      
+      <div style="text-align: center; font-size:1rem; margin-top:5rem; color: #fff;">
+	
+	<script type="text/javascript">
+    var d = new Date(); 
+    var time = d.getHours();
+ 
+
+    if (time < 12) 
+      {
+      document.write("<h1>Good morning!</h1>");
+      }
+    if (time > 12)    
+      {
+      document.write("<h1>Good afternoon!</h1>"); 
+      } 
+    if (time >= 18 || time == 20)
+      {
+      document.write("<h1>Good evening!</h1>");
+      }
+    if (time > 20 || time == 0)
+      {
+       document.write("<h1>Good night!</h1>");
+      }   
+    if (time == 12)  
+      {
+      document.write("<h1>Good noon!</h1>"); 
+      }
+    </script></p></div> 
+      <div class="login__check"> </div>
+      <div class="login__form">
+        <div class="login__row"> 
+          <svg class="login__icon name svg-icon" viewBox="0 0 20 20"> 
+            <path d="M0,20 a10,8 0 0,1 20,0z M10,0 a4,4 0 0,1 0,8 a4,4 0 0,1 0,-8" />
+          </svg>
+          <input type="text" class="login__input name" placeholder="Username" name="user_id"/>
+        </div>
+        <div class="login__row">
+          <svg class="login__icon pass svg-icon" viewBox="0 0 20 20">
+            <path d="M0,20 20,20 20,8 0,8z M10,13 10,16z M4,8 a6,8 0 0,1 12,0" />
+          </svg>
+          <input type="password" class="login__input pass" placeholder="Password" name="password"/>
+        </div>
+        <button type="button" class="login__submit">Sign in</button>
+        <p class="login__signup">Have you lost your password? &nbsp;<a class="login__submit"style="background-color : transparent; color: #fff;" >Reset</a></p>
+      </div>
+    </div>
+         
+
+<div class="app">
+      <div class="app__top">
+         
+        <p class="app__hello"> 
+    <script type="text/javascript">
+    var d = new Date();
+    var time = d.getHours();
+
+    if (time < 12) 
+      {
+      document.write("<h1>Good morning!</h1>");
+      }   
+    if (time > 12)    
+      {
+      document.write("<h1>Good afternoon!</h1>"); 
+      } 
+    if (time >= 18 || time == 20)
+      {
+      document.write("<h1>Good evening!</h1>");
+      }
+    if (time > 20 || time == 0)
+      {
+       document.write("<h1>Good night!</h1>");
+      }   
+    if (time == 12)  
+      {
+      document.write("<h1>Good noon!</h1>"); 
+      }
+    </script></p>
+        <div class="app__user">
+          <img src="cm.png" alt="" class="app__user-photo" />
+          
+        </div> 
+        <div class="app__month">
+          <span class="app__month-btn left"></span> 
+          <p class="app__month-name">
+          <script type="text/javascript">
+          var m_names = ['January', 'February', 'March', 
+               'April', 'May', 'June', 'July', 
+               'August', 'September', 'October', 'November', 'December'];
+
+          d = new Date();
+          var n = m_names[d.getMonth()]; 
+           
+          document.write(n);
+         </script>
+          </p>
+          <span class="app__month-btn right"></span>
+        </div>
+      </div>
+      <div class="app__bot">
+        <div class="app__days">
+          <div class="app__day weekday">Sun</div>
+          <div class="app__day weekday">Mon</div>
+          <div class="app__day weekday">Tue</div>
+          <div class="app__day weekday">Wed</div>
+          <div class="app__day weekday">Thu</div>
+          <div class="app__day weekday">Fri</div>
+          <div class="app__day weekday">Sad</div>
+          <div class="app__day date">8</div>
+          <div class="app__day date">9</div>
+          <div class="app__day date">10</div>
+          <div class="app__day date">11</div>
+          <div class="app__day date">12</div>
+          <div class="app__day date">13</div>
+          <div class="app__day date">14</div> 
+        </div>
+        <div class="app__meetings">
+            <div> 
+            <div class="login__form_new">
+        <div class="login__row_new"> 
+          <svg class="login__icon_new name svg-icon" style="background-image: url(envelope.svg);" > 
+            <path d="M0,20 a10,8 0 0,1 20,0z M10,0 a4,4 0 0,1 0,8 a4,4 0 0,1 0,-8" />
+          </svg>
+          <input type="text" class="login__input name" placeholder="Email"/>
+        </div>
+        <div class="login__row_new">
+          <svg class="login__icon_new pass svg-icon" style="background-image: url(phone-call.svg);">
+            <path d="M0,20 20,20 20,8 0,8z M10,13 10,16z M4,8 a6,8 0 0,1 12,0" />
+          </svg>
+          <input type="text" class="login__input pass" placeholder="Registered Mobile Number"/>
+        </div>
+              <button type="button" class="login__submit" style="margin-top: 1.5rem;">Submit</button>    
+           </div>  
+            </div>
+      </div>
+        </div>
+      </div>
+      <div class="app__logout">
+        <svg class="app__logout-icon svg-icon" viewBox="0 0 20 20">
+          <path d="M6,3 a8,8 0 1,0 8,0 M10,0 10,12"/>
+        </svg>
+      </div>
+    </div>
+
+
+
+  </div> 
+</div> 
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script src="js/index.js"></script> 
+
+
+</body>
+</html>

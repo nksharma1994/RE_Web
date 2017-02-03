@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+#menu ul{
+  list-style: none;
+}
+
+#menu li{
+  display: inline;
+}
+</style>
+   
+
+ 
+</head>
+<body>
+
+<p>Click the button to display todays day of the week.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+<div id="menu">
+  <ul>
+    <li>Sunday</li>
+    <li>Monday</li>
+    <li>Tuesday</li>
+    <li>Wednesday</li>
+    <li>Thrusday</li>
+    <li>Friday</li>
+    <li>Saturday</li>
+  </ul>
+</div>
+<script>
+function myFunction() {
+    var d = new Date();
+    var weekday = new Array(7);
+    weekday[0] = "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
+
+    var n = weekday[d.getDay()];
+    document.getElementById("demo").innerHTML = n;
+}
+</script>
+
+</body>
+</html>
+
